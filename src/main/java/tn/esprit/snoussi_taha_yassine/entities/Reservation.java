@@ -9,6 +9,7 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
+import java.time.LocalDate;
 @Entity
 
 @Setter
@@ -16,12 +17,12 @@ import lombok.ToString;
 @ToString
 @EqualsAndHashCode
 
-public class Agence {
+
+public class Reservation {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idAgence;
-    private String nom;
-    private String ville;
-    private String adresse;
-    private String telephone;
+    private Long idReservation;
+    private LocalDate dateDebut;
+    private LocalDate dateFin;
+    private StatutReservation statut;
 }

@@ -1,5 +1,5 @@
 package tn.esprit.snoussi_taha_yassine.entities;
 
-public enum StatusVehicule {
+public enum StatutVehicule {
     DISPONIBLE,LOUE,MAINTENANCE;
 }

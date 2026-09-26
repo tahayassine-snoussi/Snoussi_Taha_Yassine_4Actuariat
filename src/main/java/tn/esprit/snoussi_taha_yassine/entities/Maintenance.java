@@ -1,6 +1,8 @@
 package tn.esprit.snoussi_taha_yassine.entities;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -17,6 +19,7 @@ import java.time.LocalDate;
 
 public class Maintenance {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idMaintenance;
     private LocalDate dateDebut;
     private LocalDate dateFin;

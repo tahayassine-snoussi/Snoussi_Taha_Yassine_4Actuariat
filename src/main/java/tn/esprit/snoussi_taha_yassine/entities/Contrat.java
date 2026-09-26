@@ -4,24 +4,23 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
+
+import java.math.BigDecimal;
+import java.time.LocalDate;
 
 @Entity
-
 @Setter
 @Getter
 @ToString
 @EqualsAndHashCode
 
-public class Agence {
+public class Contrat {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idAgence;
-    private String nom;
-    private String ville;
-    private String adresse;
-    private String telephone;
+    private Long idContrat;
+    private LocalDate dateSignature;
+    private BigDecimal montantTotal;
+    private boolean valide;
+
 }
