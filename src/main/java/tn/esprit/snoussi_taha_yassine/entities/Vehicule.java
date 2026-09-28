@@ -1,9 +1,6 @@
 package tn.esprit.snoussi_taha_yassine.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
@@ -25,7 +22,9 @@ public class Vehicule {
     private String Immatriculation;
     private String marque;
     private String modele;
+    @Enumerated(EnumType.STRING)
     private CategorieVehicule categorie;
     private BigDecimal tarifJournalier;
+    @Enumerated(EnumType.STRING)
     private StatutVehicule status;
 }
