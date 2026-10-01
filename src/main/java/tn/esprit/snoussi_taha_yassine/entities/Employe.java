@@ -17,8 +17,13 @@ public class Employe {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idEmploye;
+
+    @ManyToOne
+    private Agence agence;
+
     private String nom;
     private String prenom;
+
     @Enumerated(EnumType.STRING)
     private RoleEmploye role;
 }

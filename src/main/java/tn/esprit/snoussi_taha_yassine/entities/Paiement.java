@@ -20,8 +20,13 @@ public class Paiement {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idPaiement;
+
+    
+
+
     private BigDecimal montant;
     private LocalDate datePaiement;
+
     @Enumerated(EnumType.STRING)
     private ModePaiement modePaiement;
 }
