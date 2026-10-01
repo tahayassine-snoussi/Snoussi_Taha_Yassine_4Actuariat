@@ -8,6 +8,7 @@ import lombok.ToString;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 
@@ -21,8 +22,9 @@ public class Paiement {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idPaiement;
 
-    
 
+    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
+    Contrat contrat;
 
     private BigDecimal montant;
     private LocalDate datePaiement;
