@@ -21,6 +21,10 @@ public class Contrat {
     @OneToOne(mappedBy = "contrat")
     private Reservation reservation;
 
+    @OneToMany(cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
+    List<Paiement> paiements;
+
+
     private LocalDate dateSignature;
     private BigDecimal montantTotal;
     private boolean valide;

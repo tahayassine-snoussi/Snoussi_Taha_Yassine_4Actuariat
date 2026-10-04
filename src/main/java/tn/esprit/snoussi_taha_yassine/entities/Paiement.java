@@ -23,8 +23,7 @@ public class Paiement {
     private Long idPaiement;
 
 
-    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
-    Contrat contrat;
+
 
     private BigDecimal montant;
     private LocalDate datePaiement;
