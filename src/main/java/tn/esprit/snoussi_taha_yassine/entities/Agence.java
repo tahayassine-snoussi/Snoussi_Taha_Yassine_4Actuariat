@@ -7,6 +7,7 @@ import lombok.Setter;
 import lombok.ToString;
 
 import java.util.List;
+import java.util.Set;
 
 @Entity
 
@@ -21,10 +22,10 @@ public class Agence {
     private Long idAgence;
 
     @OneToMany(mappedBy = "agence")
-    private List<Employe> employes;
+    private Set<Employe> employes;
 
     @OneToMany(mappedBy = "agence")
-    private List<Vehicule> vehicules;
+    private Set<Vehicule> vehicules;
 
     private String nom;
     private String ville;

@@ -6,6 +6,7 @@ import lombok.*;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Setter
@@ -18,11 +19,11 @@ public class Contrat {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idContrat;
 
-    @OneToOne(mappedBy = "contrat")
+    @OneToOne
     private Reservation reservation;
 
-    @OneToMany(cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
-    List<Paiement> paiements;
+    @OneToMany(mappedBy = "contrat",cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
+    Set<Paiement> paiements;
 
 
     private LocalDate dateSignature;

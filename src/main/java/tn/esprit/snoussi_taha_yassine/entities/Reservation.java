@@ -26,7 +26,7 @@ public class Reservation {
     @ManyToOne
     private Client client;
 
-    @OneToOne
+    @OneToOne(mappedBy = "reservation")
     private Contrat contrat;
 
 

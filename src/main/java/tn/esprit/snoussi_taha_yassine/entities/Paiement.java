@@ -23,6 +23,8 @@ public class Paiement {
     private Long idPaiement;
 
 
+    @ManyToOne
+    private Contrat contrat;
 
 
     private BigDecimal montant;

@@ -31,7 +31,7 @@ public class Vehicule {
     private Set<Equipement> equipements;
 
     @OneToMany(mappedBy = "vehicule")
-    private List<Reservation> reservations;
+    private Set<Reservation> reservations;
 
     private String Immatriculation;
     private String marque;
