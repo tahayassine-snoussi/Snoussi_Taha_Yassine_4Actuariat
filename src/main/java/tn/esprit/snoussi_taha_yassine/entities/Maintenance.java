@@ -1,10 +1,7 @@
 package tn.esprit.snoussi_taha_yassine.entities;
 
 import jakarta.persistence.*;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import java.time.LocalDate;
 @Entity
@@ -13,6 +10,8 @@ import java.time.LocalDate;
 @Getter
 @ToString
 @EqualsAndHashCode
+@NoArgsConstructor
+@AllArgsConstructor
 
 public class Maintenance {
     @Id

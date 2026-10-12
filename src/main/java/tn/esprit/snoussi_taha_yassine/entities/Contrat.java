@@ -13,6 +13,8 @@ import java.util.Set;
 @Getter
 @ToString
 @EqualsAndHashCode
+@NoArgsConstructor
+@AllArgsConstructor
 
 public class Contrat {
     @Id

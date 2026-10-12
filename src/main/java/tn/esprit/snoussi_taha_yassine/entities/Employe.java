@@ -1,10 +1,7 @@
 package tn.esprit.snoussi_taha_yassine.entities;
 
 import jakarta.persistence.*;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 @Entity
 
@@ -12,6 +9,8 @@ import lombok.ToString;
 @Getter
 @ToString
 @EqualsAndHashCode
+@NoArgsConstructor
+@AllArgsConstructor
 
 public class Employe {
     @Id

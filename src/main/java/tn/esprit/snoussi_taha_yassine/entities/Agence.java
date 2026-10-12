@@ -1,10 +1,7 @@
 package tn.esprit.snoussi_taha_yassine.entities;
 
 import jakarta.persistence.*;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import java.util.List;
 import java.util.Set;
@@ -15,6 +12,8 @@ import java.util.Set;
 @Getter
 @ToString
 @EqualsAndHashCode
+@NoArgsConstructor
+@AllArgsConstructor
 
 public class Agence {
     @Id
